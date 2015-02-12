@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="arcade"> 
+<head>
+	<title>Arcade Controls</title>
+	<meta name="viewport" content="width=device-width" user-scalable="no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-precomposed.png">
+	<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+	<link rel="icon" href="favicon.png">
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" />
+	<link type="text/css" rel="stylesheet" href="assets/font-awesome.css" />
+	<link type="text/css" rel="stylesheet" href="assets/main.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="assets/arcade.js"></script>
+</head>
+
+<body ng-controller="MainController">
+
+	<div class="outer-container">
+
+	<header>
+		<i class="fa fa-2x fa-navicon"></i>
+		<img src="assets/icon-hyperspin.png" />
+		<h1>Hyperspin: {{message}} (Inject System Later)</h1>
+		<div>
+			<span>{{person.firstName}} {{person.lastName}}</span>
+			<img ng-src="{{person.imageSrc}}" />
+		</div>
+
+		<div>
+			<span>Name:{{user.name}} | Location:{{user.location}}</span>
+			<img title="{{user.name}}" ng-src="{{user.avatar_url}}" />
+			{{error}}
+		</div>
+
+	</header>
+
+	<nav>
+		<div>
+		<ol class="game-grid">
+			<li><a href="#" data-game="hyperspin"><img src="assets/icon-hyperspin.png" /></a></li>
+			<li><a href="#" data-game="nba-jam-mame"><img src="assets/icon-nba-jam-mame.png" /></a></li>
+			<li><a href="#" data-game="nba-jam-te"><img src="assets/icon-nba-jam-te.png" /></a></li>
+			<li><a href="#" data-game="nba-jam-wii"><img src="assets/icon-nba-jam.png" /></a></li>
+			<li><a href="#" data-game="mk1"><img src="assets/icon-mk1.png" /></a></li>
+			<li><a href="#" data-game="mk2"><img src="assets/icon-mk2.png" /></a></li>
+			<li><a href="#" data-game="mk9"><img src="assets/icon-mk9.png" /></a></li>
+			<li><a href="#" data-game="tapper"><img src="assets/icon-tapper.png" /></a></li>
+			<li><a href="#" data-game="tekken3"><img src="assets/icon-tekken3.png" /></a></li>
+			<li><a href="#" data-game="turtles"><img src="assets/icon-turtles.png" /></a></li>
+			<li><a href="#" data-game="turtles-in-time"><img src="assets/icon-turtles-in-time.png" /></a></li>
+			<li><a href="#" data-game="pinball"><img src="assets/icon-pinball.png" /></a></li>
+			<li><a href="#" data-game="tekken-tag"><img src="assets/icon-tekken3.png" /></a></li>
+		</ol>
+
+	</div>
+	</nav>
+
+	<div class="controls-container">
+		<div class="controls">
+			<img src="assets/controls.png" />
+		</div>
+
+		<div class="lines">
+
+			<div class="button-p1-coin">
+				<span>Coin</span>
+				<img src="assets/buttons/button-p1-coin.png" />
+			</div>
+			
+			<div class="button-p1-start">
+				<span>Start</span>
+				<img src="assets/buttons/button-p1-start.png" />
+			</div>
+
+			<div class="button-admin1">
+				<span>Admin 1</span>
+				<img src="assets/buttons/button-admin1.png" />
+			</div>
+			
+			<div class="button-admin2">
+				<span>Admin 2</span>
+				<img src="assets/buttons/button-admin2.png" />
+			</div>
+
+			<div class="button-admin3">
+				<span>Admin 3</span>
+				<img src="assets/buttons/button-admin3.png" />
+			</div>
+
+			<div class="button-1">
+				<span>Button 1</span>
+				<img src="assets/buttons/button-1.png" />
+			</div>
+
+			<div class="button-2">
+				<span>Button 2</span>
+				<img src="assets/buttons/button-2.png" />
+			</div>
+
+			<div class="button-3">
+				<span>Button 3</span>
+				<img src="assets/buttons/button-3.png" />
+			</div>
+			
+			<div class="button-4">
+				<span>Button 4</span>
+				<img src="assets/buttons/button-4.png" />
+			</div>
+
+			<div class="button-5">
+				<span>Button 5</span>
+				<img src="assets/buttons/button-5.png" />
+			</div>
+
+			<div class="button-6">
+				<span>Button 6</span>
+				<img src="assets/buttons/button-6.png" />
+			</div>
+					
+		</div>
+
+		<img src="assets/controls-background-lr.jpg" />
+	</div>
+
+	</div>
+
+</body>
+</html>

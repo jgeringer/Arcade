@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html ng-app="ArcadeControls"> 
+<head>
+	<title>Arcade Controls</title>
+	<meta name="viewport" content="width=device-width" user-scalable="no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-precomposed.png">
+	<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+	<link rel="icon" href="favicon.png">
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" />
+	<link type="text/css" rel="stylesheet" href="assets/font-awesome.css" />
+	<link type="text/css" rel="stylesheet" href="assets/main.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="assets/arcade2.js"></script>
+</head>
+
+<body ng-controller="MainController">
+
+	<div class="outer-container">
+
+	<header>
+		<i class="fa fa-2x fa-navicon"></i>
+		<img src="assets/icon-hyperspin.png" />
+		<h1>Hyperspin</h1>
+	</header>
+
+	<nav>
+		<div>
+		<ol class="game-grid">
+			<li ng-repeat="x in games" ng-click="showControls(x.game)">
+				<a href="#" data-game="{{x.game}}">
+					<img ng-src="{{x.iconpath}}" />
+					{{error}}
+				</a>
+			</li>
+		</ol>
+
+	</div>
+	</nav>
+
+	<div class="controls-container">
+		<div class="controls">
+			<img src="assets/controls.png" />
+		</div>
+
+		<div class="lines">
+
+			<div ng-class="{active: button.buttonp1coin}" class="button-p1-coin">
+				<span>{{button.buttonp1coin}}</span>
+				<img src="assets/buttons/button-p1-coin.png" />
+			</div>
+			
+			<div ng-class="{active: button.buttonp1start}" class="button-p1-start">
+				<span>{{button.buttonp1start}}</span>
+				<img src="assets/buttons/button-p1-start.png" />
+			</div>
+
+			<div ng-class="{active: button.buttonadmin1}" class="button-admin1">
+				<span>{{button.buttonadmin1}}</span>
+				<img src="assets/buttons/button-admin1.png" />
+			</div>
+			
+			<div ng-class="{active: button.buttonadmin2}" class="button-admin2">
+				<span>{{button.buttonadmin2}}</span>
+				<img src="assets/buttons/button-admin2.png" />
+			</div>
+
+			<div ng-class="{active: button.buttonadmin3}" class="button-admin3">
+				<span>{{button.buttonadmin3}}</span>
+				<img src="assets/buttons/button-admin3.png" />
+			</div>
+
+			<div ng-class="{active: button.button1}" class="button-1">
+				<span>{{button.button1}}</span>
+				<img src="assets/buttons/button-1.png" />
+			</div>
+
+			<div ng-class="{active: button.button2}" class="button-2">
+				<span>{{button.button2}}</span>
+				<img src="assets/buttons/button-2.png" />
+			</div>
+
+			<div ng-class="{active: button.button3}" class="button-3">
+				<span>{{button.button3}}</span>
+				<img src="assets/buttons/button-3.png" />
+			</div>
+			
+			<div ng-class="{active: button.button4}" class="button-4">
+				<span>{{button.button4}}</span>
+				<img src="assets/buttons/button-4.png" />
+			</div>
+
+			<div ng-class="{active: button.button5}" ng-class="{active: button.button1}" class="button-5">
+				<span>{{button.button5}}</span>
+				<img src="assets/buttons/button-5.png" />
+			</div>
+
+			<div ng-class="{active: button.button6}" class="button-6">
+				<span>{{button.button6}}</span>
+				<img src="assets/buttons/button-6.png" />
+			</div>
+					
+		</div>
+
+		<img src="assets/controls-background-lr.jpg" />
+	</div>
+
+	</div>
+
+</body>
+</html>

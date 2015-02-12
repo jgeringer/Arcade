@@ -1,0 +1,216 @@
+body{
+	background:#000;
+}
+
+.outer-container{
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+nav{
+	width:30%;
+	overflow: hidden;
+	float: left;
+	height: 100%;
+}
+
+nav > div{
+	height: 100%;
+	overflow: scroll;
+}
+
+header{
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 30;
+	color:#cc0000;
+	padding:10px 10px 8px 10px;
+	box-sizing:border-box;
+	background:rgba(0,0,0,.0);
+	transition: all 1000ms ease;
+	width:30%;
+}
+header.active{	
+	background:rgba(1, 1, 1, .8)
+}
+header *{
+	float: left;
+}
+header img{
+	width:50px;
+	margin-top:-8px;
+}
+header h1{
+	margin:8px 0 0 0;
+	font-size: 1em;
+}
+
+.game-grid{
+	width: 100%;
+	list-style-type: none;
+	padding:0;
+	margin:60px 0 0 0;
+}
+
+.game-grid > *{
+	display: inline-block;
+	float:left;
+	width:50%;
+	box-sizing:border-box;
+	border:1px solid #2d2d2d;
+	background: #3d3d3d;
+	background: -moz-radial-gradient(center, ellipse cover,  #3d3d3d 0%, #090909 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3d3d3d), color-stop(100%,#090909));
+	background: -webkit-radial-gradient(center, ellipse cover,  #3d3d3d 0%,#090909 100%);
+	background: -o-radial-gradient(center, ellipse cover,  #3d3d3d 0%,#090909 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  #3d3d3d 0%,#090909 100%);
+	background: radial-gradient(ellipse at center,  #3d3d3d 0%,#090909 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d3d3d', endColorstr='#090909',GradientType=1 );
+	transition: all 1000ms ease;
+}
+
+.game-grid > *.active{
+	background: #3C0000;
+	background: -moz-radial-gradient(center, ellipse cover,  #3C0000 0%, #100000 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3C0000), color-stop(100%,#100000));
+	background: -webkit-radial-gradient(center, ellipse cover,  #3C0000 0%,#100000 100%);
+	background: -o-radial-gradient(center, ellipse cover,  #3C0000 0%,#100000 100%);
+	background: -ms-radial-gradient(center, ellipse cover,  #3C0000 0%,#100000 100%);
+	background: radial-gradient(ellipse at center, #3C0000 0%,#100000 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3C0000', endColorstr='#100000',GradientType=1 );
+}
+
+.game-grid img{
+	width:100%; 
+	height:auto;
+}
+
+.controls-container{
+	position: absolute;
+	left:0;
+	transition:all 1000ms ease;
+}
+.controls-container.active{
+	left:30%;
+	margin-right: -30%;
+}
+
+.controls-container:before{
+	content:'';
+	width:1px;
+	height:100%;
+	position: absolute;
+	top: 0;
+	left:1px;
+	z-index: 9;
+	background:#FF1212;
+}
+
+.controls, .lines{
+	position: absolute;
+	top:0;
+	left:0;	
+	-webkit-transform:translateZ(0);
+	width:100%;
+}
+
+.controls{
+	z-index: 20;
+}
+
+.lines{
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+}
+
+.lines img{
+	position: absolute;
+	top:0;
+	left:0;
+	z-index:10;
+}
+
+.lines > div{
+	opacity: 0;
+	transition:opacity 500ms ease;
+	-webkit-transition:opacity 500ms ease;
+}
+
+.lines > div.active{
+	opacity: 1;
+}
+
+.lines div span{
+	position: absolute;
+	color:#fff;
+}
+
+.controls-container img{
+	width:100%;
+	height:auto;
+}
+
+
+.button-p1-coin span{
+	right: 77%;
+	top: 16%;
+}
+
+.button-p1-start span{
+	right: 69%;
+	top: 20%;
+}
+
+.button-admin1 span{
+	right: 34%;
+	top: 17%;
+}
+
+.button-admin2 span{
+	right: 26%;
+	top: 20%;
+}
+
+.button-admin3 span{
+	right: 19%;
+	top: 24%;
+}
+
+.button-1 span{
+	right: 77%;
+	top: 46%;
+}
+
+.button-2 span{
+	right: 70%;
+	top: 40%;
+}
+
+.button-3 span{
+	right: 64%;
+	top: 34%;
+}
+
+.button-4 span{
+	left: 44%;
+	top: 83%;
+}
+
+.button-5 span{
+	left: 50%;
+	top: 77%;
+}
+
+.button-6 span{
+	left: 56%;
+	top: 71%;
+}
+
+
+
+
+
