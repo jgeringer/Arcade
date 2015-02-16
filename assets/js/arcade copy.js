@@ -11,7 +11,7 @@
 			var app = angular.module("ArcadeControls", []);
 
 			//Controller
-			var MainController = function($scope, $http){
+			var MainController = function($scope, $http, $log){
 
 				var onUserComplete = function(response){
 					$scope.games = response.data;
@@ -22,8 +22,8 @@
 				}
 
 				$scope.showControls = function(gamename){
-					console.log('game:', gamename);
-					$http.get("controls/" + gamename + ".json").then(onGameClickComplete, onErrorGame);
+					$log.info('game:', gamename);
+					$http.get("/data/controls/" + gamename + ".json").then(onGameClickComplete, onErrorGame);
 				}
 
 
@@ -35,18 +35,18 @@
 					$scope.error = "Error!";
 				}
 
-				$http.get("controls/arcadeGames.json").then(onUserComplete, onError);
+				$http.get("/data/arcadeGames.json").then(onUserComplete, onError);
 
 			};
 
-			app.controller("MainController", ["$scope", "$http", MainController]); //stuff in brackets is to not break it if it gets minified. 
+			app.controller("MainController", ["$scope", "$http", "$log", MainController]); //stuff in brackets is to not break it if it gets minified.
 
 		}
 
 		var task2 =  function(){
 			console.log('inside task 2: nothing');
 
-			
+
 		}
 
 
@@ -76,7 +76,7 @@
 
 $(function(){
 
-	
+
 	$('.fa-navicon').off('click menu-control').on('click menu-control', function(e){
 		e.preventDefault();
 		console.log('click menu');
@@ -102,7 +102,7 @@ $(function(){
 
 		// $.ajax({
 		// 	url: "controls/" + game + ".json",
-		// 	success: function(data){				
+		// 	success: function(data){
 		// 		console.log('data:', data);
 
 		// 		for(key in data) {
@@ -131,8 +131,8 @@ $(function(){
 
 (function(){
 
-	
-	
+
+
 
 }());
 

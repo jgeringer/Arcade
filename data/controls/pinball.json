@@ -1,0 +1,10 @@
+{
+	"buttonp1coin" : "Left: Coin, Right: Plunger",
+	"buttonp1start" : "Start",
+	"buttonadmin1"	: "Escape",
+	"buttonadmin3"	: "Special 1",
+	"button3" : "Left: Nudge Up, Right: Service",
+	"button4" : "Left: Left Flipper, Right: Right Flipper",
+	"button5" : "Toggle HUD",
+	"button6" : "Left: Nudge Left, Right: Nudge Right"
+}
