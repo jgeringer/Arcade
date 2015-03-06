@@ -30,10 +30,11 @@ header{
 	padding:10px 10px 8px 10px;
 	box-sizing:border-box;
 	background:rgba(0,0,0,.0);
-	transition: all 1000ms ease;
+	-webkit-transition: all 1000ms ease;
+	        transition: all 1000ms ease;
 	width:30%;
 }
-header.active{	
+header.active{
 	background:rgba(1, 1, 1, .8)
 }
 header *{
@@ -84,7 +85,7 @@ header h1{
 }
 
 .game-grid img{
-	width:100%; 
+	width:100%;
 	height:auto;
 }
 
@@ -112,7 +113,7 @@ header h1{
 .controls, .lines{
 	position: absolute;
 	top:0;
-	left:0;	
+	left:0;
 	-webkit-transform:translateZ(0);
 	width:100%;
 }
@@ -209,8 +210,3 @@ header h1{
 	left: 56%;
 	top: 71%;
 }
-
-
-
-
-
